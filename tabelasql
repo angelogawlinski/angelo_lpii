@@ -1,0 +1,14 @@
+create table categoria (
+	id int(25) NOT NULL auto_increment,
+    descricao varchar(255) default null,
+    primary key (id)
+);
+
+
+CREATE TABLE produtos (
+    id int(11) NOT NULL AUTO_INCREMENT,
+    descricao varchar(255) DEFAULT NULL,
+    idcategoria int(25) NOT NULL, 
+    PRIMARY KEY (`id`),
+    foreign key (idcategoria) references categoria(id)
+);
